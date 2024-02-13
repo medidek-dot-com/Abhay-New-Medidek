@@ -2,16 +2,14 @@ import React, { useEffect, useState, memo, useMemo } from "react";
 import { Input2 } from "../../Common/Components/Inputs/Inputs";
 import locationIcon from "/Find Doctors/Location-1.svg";
 import searchIcon from "/Find Doctors/Search.svg";
-import { H7 } from "../../Common/Components/Text/text";
+import { H7 } from "../../Common/Components/Text/Text";
 import DoctorCard from "../Components/Find Doctors/DoctorCard";
-import {axiosClient} from '../../Utils/axiosClient'
+import { axiosClient } from "../../Utils/axiosClient";
 import { Link } from "react-router-dom";
 
 const FindDoctors = () => {
-
     const [isloading, setIsLoading] = useState(false);
     const [location, setLocation] = useState("location");
-
 
     const [doctorsData, setDoctorsData] = useState([]);
 
@@ -31,11 +29,9 @@ const FindDoctors = () => {
         }
     };
 
-    useEffect(()=>{
-        getDoctorsList()
-    },[]);
-    
-
+    useEffect(() => {
+        getDoctorsList();
+    }, []);
 
     return (
         <div className="overflow-x-hidden relative min-h-[calc(100vh-108px)] mt-[40px] px-4 md:px-[50px]">
@@ -49,7 +45,7 @@ const FindDoctors = () => {
                     name="location"
                     icon={locationIcon}
                     divClasses="w-[80%] md:w-[19.27%]"
-                    onChange={(e)=>setLocation(e.target.value)}
+                    onChange={(e) => setLocation(e.target.value)}
                 />
 
                 <Input2
@@ -59,17 +55,20 @@ const FindDoctors = () => {
                     icon={searchIcon}
                     divClasses="w-[100%] md:w-[26.10%]"
                 />
-               
             </div>
-            <H7 content="188 dentists near you" className="my-6 md:mt-[50px] md:mb-[22px]" />
-            {
-                doctorsData?.map((doctorInfo)=>(
-                    // <Link key={doctorInfo?._id} to={`/doctor-details/${doctorInfo?._id}`} >
-                    <DoctorCard key={doctorInfo?._id} doctorInfo={doctorInfo} visible={true} />
-                    // </Link>
-
-                ))
-            }
+            <H7
+                content="188 dentists near you"
+                className="my-6 md:mt-[50px] md:mb-[22px]"
+            />
+            {doctorsData?.map((doctorInfo) => (
+                // <Link key={doctorInfo?._id} to={`/doctor-details/${doctorInfo?._id}`} >
+                <DoctorCard
+                    key={doctorInfo?._id}
+                    doctorInfo={doctorInfo}
+                    visible={true}
+                />
+                // </Link>
+            ))}
         </div>
     );
 };
