@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
-import { H2, H4, P1, P2 } from "../../../Common/Components/Text/Text";
-
+import { H2, H4, P1, P2 } from "../../../Common/Components/Text/Textt";
 
 const Section3 = () => {
     const featuresData = [
@@ -26,7 +25,6 @@ const Section3 = () => {
     ];
     return (
         <section className="overflow-x-hidden relative hiddenn px-[16px] md:px-[50px] py-0 md:py-[112.5px] w-full min-h-[calc(100vh-108px)] flex flex-col md:flex-row justify-between items-center">
-            
             <div className="md:w-[25%] h-[25%] blur-[120px] absolute -left-10 top-0 -z-10 bg-gradient-to-b from-[#1F51C6AD] via-[#108ED6] to-[#1F51C6AD]"></div>
             <div className="md:w-[25%] h-[25%] blur-[120px] absolute -right-10 bottom-0 -z-10 bg-gradient-to-b from-[#1F51C6AD] via-[#108ED6] to-[#1F51C6]"></div>
 

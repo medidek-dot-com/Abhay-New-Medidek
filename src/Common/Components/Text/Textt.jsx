@@ -1,3 +1,6 @@
+import React from 'react'
+
+
 export const H1 = ({content = '', className=''}) => {
     return (
         <h1 className={`font-f1 font-w3 leading-[59.99px] text-[45px] text-c15 ${className}`}>{content}</h1>
@@ -61,6 +64,13 @@ export const Span = ({content = '', className=''}) => {
 //         <p className={`font-f3 font-w2 leading-[22.5px] text-[15px] text-c16 ${className}`}>{content}</p>
 //     )
 // };
+const Text = () => {
+    return (
+      <div>text</div>
+    )
+  }
+  
+  export default Text;
 
 
 

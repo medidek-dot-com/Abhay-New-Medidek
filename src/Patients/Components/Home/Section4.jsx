@@ -1,11 +1,10 @@
 import React from "react";
-import { H2, P2 } from "../../../Common/Components/Text/Text";
+import { H2, P2 } from "../../../Common/Components/Text/Textt";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
 
 const Section4 = () => {
     return (
         <section className="overflow-x-hidden relative px-[16px] md:px-[50px] py-0 md:py-[112.5px] w-full min-h-[calc(100vh-108px)] flex flex-col md:flex-row md:justify-between items-center gap-[50px] md:gap-0">
-
             <div className="md:w-[35%] h-[25%] blur-[120px] absolute top-0 -right-10 -z-10 bg-gradient-to-t from-[#1F51C6AD] via-[#108ED6] to-[#1F51C6]"></div>
 
             <div className="md:w-[35%] h-[25%] blur-[120px] absolute left-0 bottom-0 -z-10 bg-gradient-to-b from-[#1F51C6AD] via-[#108ED6] to-[#1F51C6]"></div>
