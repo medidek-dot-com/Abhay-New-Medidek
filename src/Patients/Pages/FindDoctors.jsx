@@ -2,7 +2,7 @@ import React, { useEffect, useState, memo, useMemo } from "react";
 import { Input2 } from "../../Common/Components/Inputs/Inputs";
 import locationIcon from "/Find Doctors/Location-1.svg";
 import searchIcon from "/Find Doctors/Search.svg";
-import { H7 } from "../../Common/Components/Text/Text";
+import { H7 } from "../../Common/Components/Text/Textt";
 import DoctorCard from "../Components/Find Doctors/DoctorCard";
 import { axiosClient } from "../../Utils/axiosClient";
 import { Link } from "react-router-dom";

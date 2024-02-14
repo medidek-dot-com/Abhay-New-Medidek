@@ -1,6 +1,6 @@
 import React, { memo, useRef } from "react";
 import Avatar from "../../../Common/Components/Avatar/Avatar";
-import { H8, Span } from "../../../Common/Components/Text/Text";
+import { H8, Span } from "../../../Common/Components/Text/Textt";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
 import { Link, useNavigate } from "react-router-dom";
 
