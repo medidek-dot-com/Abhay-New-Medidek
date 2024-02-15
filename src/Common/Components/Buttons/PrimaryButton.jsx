@@ -11,11 +11,13 @@ const PrimaryButton = ({
     px="",
     py="",
     onclick,
-    reff
+    reff,
+    type
 }) => {
     return (
         <button
         ref={reff}
+        type={type}
             onClick={onclick}
             className={`w-[${w}] h-[${h}]  text-${color} rounded-[${radius}] font-f2 font-w1 ${className}`}
         >

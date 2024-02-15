@@ -1,8 +1,9 @@
 import { memo } from "react";
 
-export const Input1 = ({type='', placeholder='', name='', classname='' }) => {
+export const Input1 = ({type='', placeholder='', name='', classname='', autofocus }) => {
     return (
         <input
+        autoFocus={autofocus}
             type={type}
             placeholder={placeholder}
             name={name}

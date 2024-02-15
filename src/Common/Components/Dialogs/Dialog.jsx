@@ -10,8 +10,8 @@ const Dialog = ({ children, onclose }) => {
         };
     }, []);
     return ReactDOM.createPortal(
-        <div className="fixed inset-0 z-40 bg-c21 ">
-            <div className="bg-c2 z-50 w-[441px] rounded-[6px] mx-auto p-[25px] fixed top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+        <div className="fixed flex justify-center items-center inset-0 z-40 bg-c21 px-4">
+            <div className="relative bg-c2 w-full md:w-[441px] rounded-[6px] md:mx-auto p-[25px] ">
                 <img
                     src={crossIcon}
                     onClick={onclose}

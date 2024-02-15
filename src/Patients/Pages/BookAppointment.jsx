@@ -55,9 +55,8 @@ const BookAppointment = () => {
             <H7 content="Enter Details" />
             <DoctorCard />
             <H7 content="Select a hospital" />
-            
-           <PatientLogIn/>
-           
+
+            <PatientLogIn />
         </div>
     );
 };

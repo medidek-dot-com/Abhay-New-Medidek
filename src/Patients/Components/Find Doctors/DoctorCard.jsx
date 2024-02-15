@@ -18,7 +18,7 @@ const DoctorCard = ({ doctorInfo, visible }) => {
     }
     
     return (
-        <div  onClick={handleClick} className="py-5 flex flex-col gap-3 md:gap-0 md:flex-row justify-between md:items-center border-y border-dashed border-[#B8B8BA99] cursor-pointer">
+        <div  onClick={handleClick} className="py-5 flex flex-col gap-3 md:gap-0 md:flex-row justify-between md:items-center border-y border-dashed border-[#B8B8BA99] cursor-pointer ">
             
             <div className="flex gap-[14px]">
                 <Avatar
