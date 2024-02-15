@@ -6,7 +6,7 @@ export const Input1 = ({type='', placeholder='', name='', classname='' }) => {
             type={type}
             placeholder={placeholder}
             name={name}
-            className={`outline-none border border-c18 p-[14px] rounded-[5px] ${classname}`}
+            className={`outline-none border border-c18 h-[40px] px-4 rounded-[5px] ${classname}`}
         />
     );
 };

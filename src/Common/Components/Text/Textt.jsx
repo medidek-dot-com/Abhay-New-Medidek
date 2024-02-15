@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 export const H1 = ({content = '', className=''}) => {
@@ -59,11 +60,24 @@ export const Span = ({content = '', className=''}) => {
         <p className={`font-f3 font-w1 leading-[15.6px] text-[13px] text-c4 ${className}`}>{content}</p>
     )
 };
-// export const P4 = ({content = '', className=''}) => {
-//     return (
-//         <p className={`font-f3 font-w2 leading-[22.5px] text-[15px] text-c16 ${className}`}>{content}</p>
-//     )
-// };
+export const P4 = ({content = '', className=''}) => {
+    return (
+        <p className={`font-f3 font-w2 leading-[22.5px] text-[15px] text-c16 ${className}`}>{content}</p>
+    )
+};
+
+export const FormLable = ({content = '', className='', htmlFor=''}) => {
+    return (
+        <label htmlFor={htmlFor} className={`font-f3 font-w2 leading-[15.6px] text-[0.813rem] text-c3 ${className}`}>{content}</label>
+    )
+};
+export const FormSpan = ({content = '', className='', onclick}) => {
+    return (
+        <span onClick={onclick} className={`font-f3 font-w2 leading-[15.6px] text-[0.813rem] text-c3 ${className}`}>{content}</span>
+    )
+};
+
+
 const Text = () => {
     return (
       <div>text</div>

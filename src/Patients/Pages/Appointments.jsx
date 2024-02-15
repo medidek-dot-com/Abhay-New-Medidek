@@ -1,8 +1,11 @@
 import React from 'react'
+import TestComponentForModel from '../Components/TestComponentForModel'
 
 const Appointments = () => {
   return (
-    <div>Appointments</div>
+    <div>
+      <TestComponentForModel/>
+    </div>
   )
 }
 

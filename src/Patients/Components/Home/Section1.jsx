@@ -10,7 +10,7 @@ const Section1 = () => {
                 <img
                     src="/Home/Line2.png"
                     alt="img"
-                    className="absolute left-0 hidden"
+                    className="absolute left-0 hidden md:block"
                 />
                 <h1 className="font-f1 font-w3 text-[28px] md:text-[2.813rem] text-center text-c15 leading-[39.99px] md:leading-[52.99px]">
                     Transform Your Healthcare with Medidek
@@ -43,7 +43,7 @@ const Section1 = () => {
                 <img
                     src="/Home/Line1.png"
                     alt="img"
-                    className="absolute right-0 hidden"
+                    className="absolute right-0 hidden md:block"
                 />
             </div>
         </section>
