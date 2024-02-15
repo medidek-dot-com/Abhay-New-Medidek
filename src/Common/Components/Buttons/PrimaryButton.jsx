@@ -17,7 +17,7 @@ const PrimaryButton = ({
         <button
         ref={reff}
             onClick={onclick}
-            className={`w-[${w}] h-[${h}]  text-${color} rounded-[${radius}] font-f2 font-w2 ${className}`}
+            className={`w-[${w}] h-[${h}]  text-${color} rounded-[${radius}] font-f2 font-w1 ${className}`}
         >
             {content}
         </button>

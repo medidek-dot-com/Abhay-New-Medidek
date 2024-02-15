@@ -60,6 +60,11 @@ export const Span = ({content = '', className=''}) => {
         <p className={`font-f3 font-w1 leading-[15.6px] text-[13px] text-c4 ${className}`}>{content}</p>
     )
 };
+export const Span2 = ({children, className=''}) => {
+    return (
+        <p className={`font-f2 font-w1 leading-[19.5px] text-[13px] text-c11 ${className}`}>{children}</p>
+    )
+};
 export const P4 = ({content = '', className=''}) => {
     return (
         <p className={`font-f3 font-w2 leading-[22.5px] text-[15px] text-c16 ${className}`}>{content}</p>
@@ -73,7 +78,7 @@ export const FormLable = ({content = '', className='', htmlFor=''}) => {
 };
 export const FormSpan = ({content = '', className='', onclick}) => {
     return (
-        <span onClick={onclick} className={`font-f3 font-w2 leading-[15.6px] text-[0.813rem] text-c3 ${className}`}>{content}</span>
+        <span onClick={onclick} className={`font-f3 font-w2 leading-[15.6px] text-[0.813rem] text-c3 cursor-pointer ${className}`}>{content}</span>
     )
 };
 
