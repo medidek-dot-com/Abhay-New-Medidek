@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import ReactDOM from "react-dom";
 import crossIcon from "/Find Doctors/cross.png";
 
@@ -25,4 +25,4 @@ const Dialog = ({ children, onclose }) => {
     );
 };
 
-export default Dialog;
+export default memo(Dialog);

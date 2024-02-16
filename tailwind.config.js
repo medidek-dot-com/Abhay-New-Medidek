@@ -29,6 +29,8 @@ export default {
         c20:"#383838",
         c21:"#353535CC",
         c22:"#5D5E61BD",
+        c23:"#1F51C6AD",
+        c24:"#F23E3E"
       },
       fontFamily: {
         f1: "Playfair Display",

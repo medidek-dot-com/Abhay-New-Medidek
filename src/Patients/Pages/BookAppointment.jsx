@@ -1,6 +1,7 @@
 import { H7 } from "../../Common/Components/Text/Textt";
 import DoctorCard from "../Components/Find Doctors/DoctorCard";
 import PatientLogIn from '../Components/Authentication/PatientLogIn'
+import { memo } from "react";
 
 
 const BookAppointment = () => { 
@@ -19,4 +20,4 @@ const BookAppointment = () => {
     );
 };
 
-export default BookAppointment;
+export default memo(BookAppointment);

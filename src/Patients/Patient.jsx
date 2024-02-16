@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import FindDoctors from "./Pages/FindDoctors";
@@ -10,10 +10,12 @@ import Blogs from "./Pages/Blogs";
 import Footer from "../Common/Footer/Footer";
 import DoctorDetails from "./Pages/DoctorDetails";
 import BookAppointment from "./Pages/BookAppointment";
+import AuthContextProvider from "../Utils/Context/Patients/AuthContextProvider";
 
 const Patient = () => {
     return (
         <div>
+            <AuthContextProvider>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/find-doctors" element={<FindDoctors />} />
@@ -26,8 +28,9 @@ const Patient = () => {
                 <Route path="/blogs" element={<Blogs />} />
             </Routes>
             <Footer />
+            </AuthContextProvider>
         </div>
     );
 };
 
-export default Patient;
+export default memo(Patient);

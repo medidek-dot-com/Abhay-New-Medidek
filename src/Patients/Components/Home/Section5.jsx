@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { H2 } from "../../../Common/Components/Text/Textt";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
 
@@ -51,4 +51,4 @@ const Section5 = () => {
     );
 };
 
-export default Section5;
+export default memo(Section5);

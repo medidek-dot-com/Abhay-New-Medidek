@@ -1,4 +1,4 @@
-import React, { memo, useRef } from "react";
+import React, { memo, useCallback, useRef } from "react";
 import Avatar from "../../../Common/Components/Avatar/Avatar";
 import { H8, Span } from "../../../Common/Components/Text/Textt";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
@@ -9,13 +9,13 @@ const DoctorCard = ({ doctorInfo, visible }) => {
     const ref = useRef();
     const navigate = useNavigate();
 
-    const handleClick = (e)=>{
+    const handleClick = useCallback((e)=>{
         if(e.target != ref.current){
             navigate(`/doctor-details/${doctorInfo?._id}`)
             return
         }
         navigate(`/doctor/${doctorInfo?._id}/book_appointment`)
-    }
+    },[]);
     
     return (
         <div  onClick={handleClick} className="py-5 flex flex-col gap-3 md:gap-0 md:flex-row justify-between md:items-center border-y border-dashed border-[#B8B8BA99] cursor-pointer ">

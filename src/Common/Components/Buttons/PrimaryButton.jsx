@@ -1,6 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
+import LoadingDots from "../Animation/LoadingDots/LoadingDots";
 
-const PrimaryButton = ({
+const PrimaryButton = memo(({
     w = "",
     h = "",
     bg = "c1",
@@ -12,7 +13,9 @@ const PrimaryButton = ({
     py="",
     onclick,
     reff,
-    type
+    type,
+    children,
+    loading
 }) => {
     return (
         <button
@@ -21,10 +24,10 @@ const PrimaryButton = ({
             onClick={onclick}
             className={`w-[${w}] h-[${h}]  text-${color} rounded-[${radius}] font-f2 font-w1 ${className}`}
         >
-            {content}
+            {loading ? <LoadingDots/> : content}
         </button>
-    );
-};
+    )
+});
 
 // rough work (decency)
 
@@ -34,4 +37,4 @@ const PrimaryButton = ({
         </button> */
 }
 
-export default PrimaryButton;
+export default memo(PrimaryButton);

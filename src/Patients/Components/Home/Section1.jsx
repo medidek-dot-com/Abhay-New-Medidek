@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import './Style/section1.css'
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
 
@@ -50,4 +50,4 @@ const Section1 = () => {
     );
 };
 
-export default Section1;
+export default memo(Section1);

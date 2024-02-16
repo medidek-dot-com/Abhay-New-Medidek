@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import TestComponentForModel from '../Components/TestComponentForModel'
 
 const Appointments = () => {
@@ -9,4 +9,4 @@ const Appointments = () => {
   )
 }
 
-export default Appointments
+export default memo(Appointments)

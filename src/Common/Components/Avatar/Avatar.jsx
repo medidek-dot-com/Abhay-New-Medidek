@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Avatar = ({src, className}) => {
   return (
@@ -8,4 +8,4 @@ const Avatar = ({src, className}) => {
   )
 }
 
-export default Avatar
+export default memo(Avatar)

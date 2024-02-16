@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FormLable, FormSpan, H4 } from "../../../../Common/Components/Text/Textt";
 import { Input1 } from "../../../../Common/Components/Inputs/Inputs";
 import PrimaryButton from "../../../../Common/Components/Buttons/PrimaryButton";
@@ -39,4 +39,4 @@ const EnterPassword = () => {
     );
 };
 
-export default EnterPassword;
+export default memo(EnterPassword);

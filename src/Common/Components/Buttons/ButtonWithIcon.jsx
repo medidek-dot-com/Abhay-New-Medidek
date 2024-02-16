@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const ButtonWithIcon = ({children, onclick}) => {
   return (
@@ -6,4 +6,4 @@ const ButtonWithIcon = ({children, onclick}) => {
   )
 }
 
-export default ButtonWithIcon
+export default memo(ButtonWithIcon)

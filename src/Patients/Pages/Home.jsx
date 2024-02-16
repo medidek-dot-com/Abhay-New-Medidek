@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Section1 from '../Components/Home/Section1'
 import Section2 from '../Components/Home/Section2'
 import Section3 from '../Components/Home/Section3'
@@ -19,4 +19,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default memo(Home)

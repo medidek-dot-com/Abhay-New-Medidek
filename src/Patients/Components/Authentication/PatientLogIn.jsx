@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import Dialog from '../../../Common/Components/Dialogs/Dialog';
 import EnterPassword from '../Authentication/Components/EnterPassword';
 import EnterMailOrPhone from '../Authentication/Components/EnterMailOrPhone'
@@ -8,9 +8,9 @@ const PatientLogIn = () => {
     const [enterPassword, setEnterPassword] = useState(false);
     return (
         <Dialog onclose={() => setOpen(false)}>
-            {enterPassword ? <EnterPassword /> : <EnterMailOrPhone />}
+            {enterPassword ? <EnterPassword /> : <EnterMailOrPhone setEnterPassword={setEnterPassword}/>}
         </Dialog>
     );
 };
 
-export default PatientLogIn;
+export default memo(PatientLogIn);

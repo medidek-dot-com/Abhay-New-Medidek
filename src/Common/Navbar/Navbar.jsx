@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
 import useClickAwayToClose from "../../Utils/Hooks/useClickAwayToClose";
@@ -120,4 +120,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -7,9 +7,14 @@ import {
 } from "./localStorageManager";
 
 export const axiosClient = axios.create({
-    baseURL: "https://mehrhospitality.com/",
+    baseURL: "http://localhost:5001",
     // withCredentials: true
 });
+
+// export const axiosClient = axios.create({
+//     baseURL: "https://mehrhospitality.com/",
+//     // withCredentials: true
+// });
 
 axiosClient.interceptors.request.use((request) => {
     const accessToken = getItem(KEY_ACCESS_TOKEN);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import './Style/section1.css'
 
 
@@ -18,4 +18,4 @@ const Section2 = () => {
     );
 };
 
-export default Section2;
+export default memo(Section2);
