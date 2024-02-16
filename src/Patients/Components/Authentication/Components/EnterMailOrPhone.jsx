@@ -1,12 +1,15 @@
-import React from "react";
-import { Input1 } from "../../../Components/Inputs/Inputs";
-import { FormLable, FormSpan, H4, Span2 } from "../../../Components/Text/Textt";
-import PrimaryButton from "../../../Components/Buttons/PrimaryButton";
-import ButtonWithIcon from "../../../Components/Buttons/ButtonWithIcon";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BiLogoFacebookCircle } from "react-icons/bi";
+import { FormSpan, H4, Span2 } from "../../../../Common/Components/Text/Textt";
+import { Input1 } from "../../../../Common/Components/Inputs/Inputs";
+import PrimaryButton from "../../../../Common/Components/Buttons/PrimaryButton";
+import ButtonWithIcon from "../../../../Common/Components/Buttons/ButtonWithIcon";
 
 const EnterMailOrPhone = () => {
+
+    const [signUp, setSignUp] = useState(false);
+
     const handleContineo = (e) => {
         e.preventDefault();
     };
@@ -48,7 +51,7 @@ const EnterMailOrPhone = () => {
             </div>
             <Span2 className="mt-4 text-center flex gap-[5px] justify-center items-center">
                 Don’t have an account?
-                <FormSpan content="Click here" />
+                <FormSpan content="Click here" onclick={()=>setSignUp(true)}/>
             </Span2>
         </div>
     );

@@ -1,51 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Dialog from "../../Common/Components/Dialogs/Dialog";
-import { useSelector } from "react-redux";
 import { H7 } from "../../Common/Components/Text/Textt";
 import DoctorCard from "../Components/Find Doctors/DoctorCard";
-import { axiosClient } from "../../Utils/axiosClient";
-import { useParams } from "react-router-dom";
-import PrimaryButton from "../../Common/Components/Buttons/PrimaryButton";
-import PatientLogIn from "../../Common/Authentication/Patient/PatientLogIn";
-import TestComponentForModel from "../Components/TestComponentForModel";
+import PatientLogIn from '../Components/Authentication/PatientLogIn'
 
-const BookAppointment = () => {
-    const { doctorId } = useParams();
-    const { user, isLoggedIn } = useSelector((state) => state.auth);
-    const [doctorInfo, setDoctorInfo] = useState({});
 
-    // const getSingleDoctorDetails = async () => {
-    //     try {
-    //         const response = await axiosClient.get(
-    //             `/v2/singledoctor/${doctorId}`
-    //         );
-
-    //         console.log(response)
-
-    //         // if (response.status === "ok") {
-    //         //     setDuid(response.result.doctorid);
-    //         //     setDoctorInfo(response.result);
-    //         //     try {
-    //         //         const hospitaList = await axiosClient.get(
-    //         //             `/v2/multipleloginprofile/${response?.result?.doctorid}`
-    //         //         );
-    //         //         // if (hospitaList.status === "ok") {
-    //         //         //     setHospitalList(hospitaList.result);
-    //         //         // }
-    //         //         return;
-    //         //     } catch (error) {
-    //         //         // setBookAppointmentButtonLoading(false);
-    //         //         console.log(error);
-    //         //     }
-    //         // }
-    //     } catch (error) {
-    //         console.log(error.message);
-    //     }
-    // };
-
-    // useEffect(()=>{
-    //   getSingleDoctorDetails();
-    // })
+const BookAppointment = () => { 
 
     return (
         <div className="overflow-x-hidden flex flex-col gap-5 relative min-h-[calc(100vh-108px)] mt-[40px] px-4 md:px-[24.74%] ">

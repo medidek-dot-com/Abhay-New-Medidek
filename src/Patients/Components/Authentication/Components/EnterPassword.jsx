@@ -1,8 +1,7 @@
 import React from "react";
-import { FormLable, FormSpan, H4 } from "../../../Components/Text/Textt";
-import { Input1 } from "../../../Components/Inputs/Inputs";
-import PrimaryButton from "../../../Components/Buttons/PrimaryButton";
-
+import { FormLable, FormSpan, H4 } from "../../../../Common/Components/Text/Textt";
+import { Input1 } from "../../../../Common/Components/Inputs/Inputs";
+import PrimaryButton from "../../../../Common/Components/Buttons/PrimaryButton";
 const EnterPassword = () => {
     return (
         <div>
