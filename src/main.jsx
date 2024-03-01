@@ -9,7 +9,7 @@ import { persistor, store } from './Utils/Store/store.js'
 import ScrollToTop from './ScrollToTop.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
  <Provider store={store}>
  <PersistGate persistor={persistor}>
 
@@ -21,5 +21,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     </Provider>
 
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )

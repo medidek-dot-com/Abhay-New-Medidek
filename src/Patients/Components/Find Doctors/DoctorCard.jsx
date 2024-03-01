@@ -1,25 +1,37 @@
 import React, { memo, useCallback, useRef } from "react";
 import Avatar from "../../../Common/Components/Avatar/Avatar";
-import { H8, Span } from "../../../Common/Components/Text/Textt";
+import { FormSpan, H8, P2, Span } from "../../../Common/Components/Text/Textt";
 import PrimaryButton from "../../../Common/Components/Buttons/PrimaryButton";
 import { Link, useNavigate } from "react-router-dom";
 
-const DoctorCard = ({ doctorInfo, visible }) => {
-
+const DoctorCard = ({
+    doctorInfo,
+    visible,
+    className = "",
+    discreption,
+    fullDiscreption,
+    clickble,
+    sm,
+    hideInSm,
+    verified,
+}) => {
     const ref = useRef();
     const navigate = useNavigate();
-
-    const handleClick = useCallback((e)=>{
-        if(e.target != ref.current){
-            navigate(`/doctor-details/${doctorInfo?._id}`)
-            return
+    const handleClick = useCallback((e) => {
+        if (!clickble) return;
+        if (e.target != ref.current) {
+            navigate(`/doctor-details/${doctorInfo?._id}`);
+            return;
         }
-        navigate(`/doctor/${doctorInfo?._id}/book_appointment`)
-    },[]);
-    
+        navigate(`/doctor/${doctorInfo?._id}/book_appointment`);
+    }, []);
+
+    console.log("Doctors card")
     return (
-        <div  onClick={handleClick} className="py-5 flex flex-col gap-3 md:gap-0 md:flex-row justify-between md:items-center border-y border-dashed border-[#B8B8BA99] cursor-pointer ">
-            
+        <div
+            onClick={handleClick}
+            className={`py-5 flex flex-col gap-3 md:gap-0 md:flex-row justify-between md:items-center ${!clickble ? "cursor-default" : "cursor-pointer"} rounded-[5px] ${className}`}
+        >
             <div className="flex gap-[14px]">
                 <Avatar
                     src={doctorInfo?.imgurl}
@@ -30,6 +42,25 @@ const DoctorCard = ({ doctorInfo, visible }) => {
                         <H8 content={doctorInfo?.nameOfTheDoctor} />
                         <Span content="|" />{" "}
                         <Span content={doctorInfo?.speciality} />
+                        {verified && (
+                            <div
+                                className={
+                                    "flex items-center gap-1 bg-c7 top-[15px] right-[15px] px-2 py-[5px] rounded-[5px]"
+                                }
+                            >
+                                <img
+                                    src="/Find Doctors/AppointmentVerified.svg"
+                                    alt="img"
+                                    className="w-[11.08px]"
+                                />
+                                <FormSpan
+                                    content={"Verified"}
+                                    className={
+                                        "font-w1 whitespace-nowrap text-[10px]"
+                                    }
+                                />
+                            </div>
+                        )}
                     </div>
                     <Span
                         content={`${doctorInfo?.yearOfExprience} Years Experience`}
@@ -37,24 +68,39 @@ const DoctorCard = ({ doctorInfo, visible }) => {
                     <Span
                         content={`₹${doctorInfo?.connsultationFee} Consultation fee `}
                     />
-                    <div className="flex items-center gap-[5px]">
+                    <div
+                        className={`flex ${hideInSm && "hidden"} items-center gap-[5px]`}
+                    >
                         <img src="/Find Doctors/Location-2.svg" alt="img" />
                         <Span content={doctorInfo?.location} />
                     </div>
                     <Span content="114 Ratings" />
+                    {discreption && (
+                        <P2
+                            content={doctorInfo?.description}
+                            className={`text-c16 w-[90%] mt-1 font-w1 ${sm ? "block" : "hidden"} md:block`}
+                        />
+                    )}
                 </div>
             </div>
-            
-           {visible && <PrimaryButton
-                className={"bg-c1 font-f2 font-w1 w-full md:w-[145px]"}
-                w={"145px"}
-                h={"45px"}
-                bg={"c1"}
-                color={"white"}
-                radius={"44px"}
-                content={"Book Now"}
-                reff={ref}
-            />}
+            {fullDiscreption && (
+                <P2
+                    content={doctorInfo?.description}
+                    className={"text-c16 w-[90%] font-w1 block md:hidden"}
+                />
+            )}
+            {visible && (
+                <PrimaryButton
+                    className={"bg-c1 font-f2 w-full md:w-[145px]"}
+                    w={"145px"}
+                    h={"45px"}
+                    bg={"c1"}
+                    color={"white"}
+                    radius={"44px"}
+                    content={"Book Now"}
+                    reff={ref}
+                />
+            )}
         </div>
     );
 };

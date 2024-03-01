@@ -5,16 +5,17 @@ import {
     removeItem,
     setItem,
 } from "./localStorageManager";
-
-// export const axiosClient = axios.create({
-//     baseURL: "http://localhost:5001",
-//     // withCredentials: true
-// });
+import useGetAuthenticate from "./Hooks/useGetAuthenticate";
 
 export const axiosClient = axios.create({
-    baseURL: "https://mehrhospitality.com/",
+    baseURL: "http://localhost:5001",
     // withCredentials: true
 });
+
+// export const axiosClient = axios.create({
+//     baseURL: "https://mehrhospitality.com/",
+//     // withCredentials: true
+// });
 
 axiosClient.interceptors.request.use((request) => {
     const accessToken = getItem(KEY_ACCESS_TOKEN);
@@ -35,7 +36,7 @@ axiosClient.interceptors.response.use(
             // originalRequest._retry = true;
 
             removeItem(KEY_ACCESS_TOKEN);
-            window.location.replace("/");
+            // window.location.replace("/");
         }
 
         return Promise.reject(data);

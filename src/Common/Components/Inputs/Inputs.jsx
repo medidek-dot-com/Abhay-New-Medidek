@@ -9,6 +9,7 @@ export const Input1 = memo(
         autofocus,
         value,
         onchange,
+        required
     }) => {
         return (
             <input
@@ -18,6 +19,7 @@ export const Input1 = memo(
                 type={type}
                 placeholder={placeholder}
                 name={name}
+                required={required}
                 className={`outline-none border border-c18 h-[40px] px-4 rounded-[5px] ${classname} placeholder:text-c22 placeholder:font-f3 font-[500]`}
             />
         );
@@ -36,22 +38,27 @@ export const Input2 = memo(
         children,
         onchange,
         autoFocus,
+        required,
+        iconClick
     }) => {
+
         return (
             <div
-                className={`relative h-[41px] border border-c17 rounded-[106px]  ${divClasses} `}
+                className={`relative h-[41px] border border-c17 text-[13px] ${divClasses} `}
             >
                 <input
+                    required={required}
                     type={type}
                     autoFocus={autoFocus}
                     placeholder={placeholder}
                     name={name}
                     onChange={onchange}
                     value={value}
-                    className={`outline-none border font-f2 font-w1 leading-[18.04px] rounded-[106px] text-c19 border-c18 w-full h-full ${icon && "pr-[24%]   md:pr-[14%]"} px-[15px] placeholder:text-c22 placeholder:font-f3 font-[500] border-none ${inputClasses}`}
+                    className={`outline-none border font-f2 font-w1 leading-[18.04px]  text-c19 border-c18 w-full h-full ${icon && "pr-[24%] md:pr-[14%]"} px-[15px] placeholder:text-c22 placeholder:font-f3 font-[500] border-none ${inputClasses}`}
                 />
                 {icon && (
                     <img
+                    onClick={iconClick}
                         src={icon}
                         alt="icon"
                         className={`absolute right-0 top-0 bottom-0 my-auto  ${icon && "mr-[15px]"} ${iconClasses}`}

@@ -44,7 +44,8 @@ const FindDoctors = () => {
                     placeholder="Enter location"
                     name="location"
                     icon={locationIcon}
-                    divClasses="w-[80%] md:w-[19.27%]"
+                    divClasses="w-[80%] md:w-[19.27%] rounded-[106px]"
+                    inputClasses="rounded-[106px] text-[13px]"
                     onChange={(e) => setLocation(e.target.value)}
                 />
 
@@ -53,11 +54,12 @@ const FindDoctors = () => {
                     placeholder="Type of doctor"
                     name="speciality "
                     icon={searchIcon}
-                    divClasses="w-[100%] md:w-[26.10%]"
+                    divClasses="w-[100%] md:w-[26.10%] rounded-[106px]"
+                    inputClasses="rounded-[106px] text-[13px]"
                 />
             </div>
             <H7
-                content="188 dentists near you"
+                content={`${doctorsData?.length} dentists near you`}
                 className="my-6 md:mt-[50px] md:mb-[22px]"
             />
             {doctorsData?.map((doctorInfo) => (
@@ -66,6 +68,9 @@ const FindDoctors = () => {
                     key={doctorInfo?._id}
                     doctorInfo={doctorInfo}
                     visible={true}
+                    clickble={true}
+                    discreption={false}
+                    className="border-y border-dashed border-[#B8B8BA99] "
                 />
                 // </Link>
             ))}

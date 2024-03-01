@@ -1,6 +1,6 @@
 /* HTML: <div class="loader"></div> */
 .loader {
-    width: 15px;
+    width: 10px;
     margin-inline: auto;
     aspect-ratio: 1;
     border-radius: 50%;

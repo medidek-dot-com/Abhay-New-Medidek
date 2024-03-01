@@ -11,3 +11,7 @@ html{
   margin: 0;
   box-sizing: border-box;
 }
+
+input[type= number]::-webkit-inner-spin-button{
+  display: none;
+}

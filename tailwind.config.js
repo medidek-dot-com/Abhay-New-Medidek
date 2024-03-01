@@ -25,17 +25,21 @@ export default {
         c16: "#000000",
         c17: "#D9D9D980",
         c18: "#D9D9D9",
-        c19:"#242323",
-        c20:"#383838",
-        c21:"#353535CC",
-        c22:"#5D5E61BD",
-        c23:"#1F51C6AD",
-        c24:"#F23E3E"
+        c19: "#242323",
+        c20: "#383838",
+        c21: "#353535CC",
+        c22: "#5D5E61BD",
+        c23: "#1F51C6AD",
+        c24: "#F23E3E",
+        c25: "#5D5E6170",
+        c26: "#D9D9D961",
+        c27: "#D9D9D933",
+        c28: "#86888A",
       },
       fontFamily: {
         f1: "Playfair Display",
         f2: "Poppins",
-        f3:'Lato'
+        f3: 'Lato'
       },
       fontWeight: {
         w1: 500,
@@ -44,5 +48,18 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".no-scrollbar::-webkit-scrollbar":{
+          display: "none",
+        },
+        "no-scrollbar":{
+          "-ms-overflow-style": "none",
+          "-scrollbar-width": "none",
+        },
+      };
+      addUtilities(newUtilities);
+    }
+  ],
 }

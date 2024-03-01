@@ -7,8 +7,10 @@ const AuthContextProvider = ({children}) =>{
         password: "",
     })
 
+    const [requiredLogIn, setRequiredLogIn] = useState(false);
+
     return(
-        <AuthContext.Provider value={{signInInfo, setSignInInfo}}>
+        <AuthContext.Provider value={{signInInfo, setSignInInfo, requiredLogIn, setRequiredLogIn}}>
             {children}
         </AuthContext.Provider>
     )
